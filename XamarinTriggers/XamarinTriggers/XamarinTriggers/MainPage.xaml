@@ -6,5 +6,6 @@
              x:Class="XamarinTriggers.MainPage">
     <StackLayout Padding="20">
         <Button Clicked="PropertyTriggers" Text="Property Triggers" />
+        <Button Clicked="DataTriggers" Text="Data Triggers" />
     </StackLayout>
 </ContentPage>

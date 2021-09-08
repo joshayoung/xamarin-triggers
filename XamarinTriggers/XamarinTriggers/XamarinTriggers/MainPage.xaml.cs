@@ -15,5 +15,10 @@ namespace XamarinTriggers
         {
             Navigation.PushAsync(new PropertyTriggerPage());
         }
+
+        private void DataTriggers(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DataTriggersPage());
+        }
     }
 }
