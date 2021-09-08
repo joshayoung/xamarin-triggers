@@ -4,7 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true"
-             x:Class="XamarinTriggers.Pages.PropertyTriggerPage">
+             x:Class="XamarinTriggers.Pages.PropertyTriggersPage">
     <ContentPage.Content>
         <StackLayout Padding="20">
             <StackLayout VerticalOptions="CenterAndExpand">
