@@ -1,14 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:XamarinTriggers"
              x:Class="XamarinTriggers.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Padding="20">
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Enter the word 'Correct':" />
+            <Entry BackgroundColor="Tomato">
+                <Entry.Triggers>
+                    <!-- Here, this runs on the 'Entry' and uses the 'Text' value to trigger the change: -->
+                    <Trigger TargetType="Entry" Property="Text" Value="Correct">
+                        <!-- When the text matches the string 'Correct', 
+                             the background will change to the Setter color -->
+                        <Setter Property="BackgroundColor" Value="Khaki" />
+                        <Setter Property="TextColor" Value="Tomato" />
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+        </StackLayout>
     </StackLayout>
-
 </ContentPage>
