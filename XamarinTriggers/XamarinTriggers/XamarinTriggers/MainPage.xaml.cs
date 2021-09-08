@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
+using XamarinTriggers.Pages;
 
 namespace XamarinTriggers
 {
@@ -12,6 +9,11 @@ namespace XamarinTriggers
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void PropertyTriggers(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PropertyTriggerPage());
         }
     }
 }

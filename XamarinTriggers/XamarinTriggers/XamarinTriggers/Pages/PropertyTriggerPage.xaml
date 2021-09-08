@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             x:Class="XamarinTriggers.Pages.PropertyTriggerPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Enter the word 'Correct':" />
+                <Entry BackgroundColor="Tomato">
+                    <Entry.Triggers>
+                        <!-- Here, this runs on the 'Entry' and uses the 'Text' value to trigger the change: -->
+                        <Trigger TargetType="Entry" Property="Text" Value="Correct">
+                            <!-- When the text matches the string 'Correct', 
+                                 the background will change to the Setter color -->
+                            <Setter Property="BackgroundColor" Value="Khaki" />
+                            <Setter Property="TextColor" Value="Tomato" />
+                        </Trigger>
+                    </Entry.Triggers>
+                </Entry>
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label Text="Focus in this field" />
+                <Entry BackgroundColor="Tomato">
+                    <Entry.Triggers>
+                        <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                            <Setter Property="BackgroundColor" Value="Khaki" />
+                        </Trigger>
+                    </Entry.Triggers>
+                </Entry>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
