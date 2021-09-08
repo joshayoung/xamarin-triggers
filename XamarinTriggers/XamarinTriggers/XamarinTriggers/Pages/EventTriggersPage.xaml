@@ -8,13 +8,25 @@
              x:Class="XamarinTriggers.Pages.EventTriggersPage">
     <ContentPage.Content>
         <StackLayout Padding="20">
-            <Entry Placeholder="Enter a Value">
-                <Entry.Triggers>
-                    <EventTrigger Event="TextChanged">
-                        <events:MyEventTrigger />
-                    </EventTrigger>
-                </Entry.Triggers>
-            </Entry>
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Entry Placeholder="Enter a Value">
+                    <Entry.Triggers>
+                        <EventTrigger Event="TextChanged">
+                            <events:MyEventTrigger />
+                        </EventTrigger>
+                    </Entry.Triggers>
+                </Entry>
+            </StackLayout>
+            
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Button Text="Submit" BorderColor="Black" BorderWidth="2">
+                    <Button.Triggers>
+                        <EventTrigger Event="Clicked">
+                            <events:MyClickedEvent />
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
