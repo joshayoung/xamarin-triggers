@@ -27,6 +27,15 @@
                     </Button.Triggers>
                 </Button>
             </StackLayout>
+            
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Button 
+                    Clicked="ToggleButtonColor" 
+                    Text="Click Me" 
+                    BorderColor="Black" 
+                    BorderWidth="1" /> 
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

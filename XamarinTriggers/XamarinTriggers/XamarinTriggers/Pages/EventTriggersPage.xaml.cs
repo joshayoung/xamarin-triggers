@@ -12,9 +12,18 @@ namespace XamarinTriggers.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EventTriggersPage : ContentPage
     {
+        private bool isClicked;
+        
         public EventTriggersPage()
         {
             InitializeComponent();
+        }
+
+        private void ToggleButtonColor(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            isClicked = !isClicked;
+            button.BackgroundColor = isClicked ? Color.Tomato : Color.Khaki;
         }
     }
 }
