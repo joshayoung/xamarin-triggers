@@ -19,5 +19,16 @@
                 </Entry.Triggers>
             </Entry>
         </StackLayout>
+        
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label Text="Focus in this field" />
+            <Entry BackgroundColor="Tomato">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                        <Setter Property="BackgroundColor" Value="Khaki" />
+                    </Trigger>
+                </Entry.Triggers>
+            </Entry>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
