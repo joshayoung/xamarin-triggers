@@ -1,20 +1,19 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinTriggers.ViewModels;
 
 namespace XamarinTriggers.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class DataTriggersPage : ContentPage
     {
-        public DataTriggersPage()
+        private readonly DataTriggerViewModel _dataTriggerViewModel;
+
+        public DataTriggersPage(DataTriggerViewModel dataTriggerViewModel)
         {
             InitializeComponent();
+            this.BindingContext = _dataTriggerViewModel = dataTriggerViewModel;
         }
     }
 }
