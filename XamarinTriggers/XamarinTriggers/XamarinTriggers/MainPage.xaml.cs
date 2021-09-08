@@ -24,5 +24,10 @@ namespace XamarinTriggers
             dataTriggerViewModel.FullName = "Set this to an empty string to hide the label";
             Navigation.PushAsync(new DataTriggersPage(dataTriggerViewModel));
         }
+
+        private void EventTriggers(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EventTriggersPage());
+        }
     }
 }
